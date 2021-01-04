@@ -55,7 +55,6 @@ export default class RoomProvider extends Component {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
-    console.log(name, value);
 
     this.setState(
       {
@@ -82,7 +81,7 @@ export default class RoomProvider extends Component {
     capacity = parseInt(capacity);
     price = parseInt(price);
     // filter by type
-    if (type !== "all") {
+    if (type !== "hammasi") {
       tempRooms = tempRooms.filter(room => room.type === type);
     }
     // filter by capacity
